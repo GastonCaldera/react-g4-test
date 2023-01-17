@@ -2,19 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-789CSDCEX4");
+
 
 export default function App() {
-  
   useEffect(() => {
-    ReactGA.event({
-      category: "category-accion",
-      action: "test-action",
-      label: "your label", // optional
-      value: 99, // optional, must be a number
-      nonInteraction: true, // optional, true/false
-      transport: "xhr", // optional, beacon/xhr/image
-    });
+    ReactGA.initialize("G-789CSDCEX4");
   }, [])
   
   return (
